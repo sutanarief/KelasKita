@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
-
-const loading = () => {
-  return (
-    <div>Loading . . .</div>
-  )
-}
+import NavBar from './components/Navbar';
+import Main from './routes';
 
 function App() {
   return (
-      <Router>
-        <React.Suspense fallback={loading()}>
-        </React.Suspense>
-      </Router>
+    <>
+    <NavBar/>
+    <main>
+      <Main/>
+    </main>
+    <footer>
+      <h1>ini footer</h1>
+    </footer>
+    </>
   );
 }
 

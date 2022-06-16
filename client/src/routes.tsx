@@ -1,27 +1,20 @@
 import React from 'react'
+import { Route, Routes } from 'react-router-dom'
 
+const Home = React.lazy(() => import('./views/HomePage/HomePage'))
+const Login = React.lazy(() => import('./views/Login/Login'))
 
+const Loading = () => <h1>Loading...</h1>
 
-const Home = React.lazy(() => import('./views/HomePage'))
-const Login = React.lazy(() => import('./views/Login'))
+const Main = () => {
+  return (
+    <React.Suspense fallback={<Loading/>}>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/login" element={<Login/>} />
+      </Routes>
+    </React.Suspense>
+  )
+}
 
-const routes = [
-  {
-    path: '/',
-    exact: true,
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/login',
-    exact: true,
-    name: 'Login',
-    component: Login
-  },
-  {
-    path: '*',
-    component: null
-  }
-]
-
-export default routes
+export default Main
