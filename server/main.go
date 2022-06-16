@@ -1,6 +1,9 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"kelaskita-restful/configs"
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
 	router := gin.Default()
@@ -10,5 +13,9 @@ func main() {
 			"data": "Surprise Madafaka, the king is back!",
 		})
 	})
+
+	//run database
+	configs.ConnectDB()
+
 	router.Run("localhost:3000")
 }
