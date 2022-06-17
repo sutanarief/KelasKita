@@ -2,9 +2,9 @@ package controllers
 
 import (
     "context"
-    "gin-mongo-api/configs"
-    "gin-mongo-api/models"
-    "gin-mongo-api/responses"
+    "kelaskita-restful/configs"
+    "kelaskita-restful/models"
+    "kelaskita-restful/responses"
     "net/http"
     "time"
 

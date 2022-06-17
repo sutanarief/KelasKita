@@ -1,7 +1,7 @@
 package routes
 
 import (
-    "gin-mongo-api/controllers"
+    "kelaskita-restful/controllers"
     "github.com/gin-gonic/gin"
 )
 
