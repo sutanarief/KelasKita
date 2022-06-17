@@ -2,6 +2,7 @@ package main
 
 import (
 	"kelaskita-restful/configs"
+	"kelaskita-restful/routes"
 	"github.com/gin-gonic/gin"
 )
 
@@ -16,6 +17,9 @@ func main() {
 
 	//run database
 	configs.ConnectDB()
+
+	//routes
+	routes.UserRoute(router)
 
 	router.Run("localhost:3000")
 }
