@@ -6,7 +6,7 @@ import Main from './routes';
 function App() {
   return (
     <>
-    <NavBar/>
+      <NavBar/>
     <main>
       <Main/>
     </main>

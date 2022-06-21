@@ -3,13 +3,14 @@ package main
 import (
 	"kelaskita-restful/configs"
 	"kelaskita-restful/routes"
+
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
 	router := gin.Default()
 
-	router.GET("/", func(c *gin.Context){
+	router.GET("/", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"data": "Surprise Madafaka, the king is back!",
 		})
@@ -21,5 +22,5 @@ func main() {
 	//routes
 	routes.UserRoute(router)
 
-	router.Run("localhost:3000")
+	router.Run("localhost:4000")
 }
