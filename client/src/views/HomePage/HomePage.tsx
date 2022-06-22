@@ -1,10 +1,13 @@
 import React from 'react'
 import NotesHome from '../../assets/notes-home.svg'
+import {
+  HomeWrapper
+} from '../../styles/Home.style'
 
-const HomePage = () => {
+const HomePage:React.FC = () => {
   return (
     <>
-      <div>HomePage</div>
+      <HomeWrapper>HomePage</HomeWrapper>
     </>
   )
 }

@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import * as colors from './colors'
 
 export const NavbarContainer = styled.nav`
   width: 100%;
   height: 80px;
-  background-color: #00509D;
   display: flex;
   flex-direction: column;
 `
@@ -37,12 +37,21 @@ export const TitleLinkContainer = styled(NavbarLinkContainer)`
 `
 
 export const NavbarLink = styled(Link)`
-  color: white;
+  color: #05386B;
   font-size: large;
   font-weight: 500;
   align-self: center;
   text-decoration: none;
-  margin: 10px;
+  margin-right: 60px;
+`
+
+export const ButtonLink = styled.button`
+  background-color: ${colors.darkBlue};
+  color: ${colors.white};
+  font-weight: 800;
+  font-size: large;
+  border-radius: 30px;
+  padding: 10px 30px 10px 30px;
 `
 
 export const TitleLink = styled(NavbarLink)`

@@ -8,31 +8,37 @@ import {
   RightContainer, 
   NavbarLink, 
   TitleLink,
-  TitleLinkContainer
+  TitleLinkContainer,
+  ButtonLink
 } from '../styles/Navbar.style';
+import Icon from './Icon'
 
-type NavBarProps = {
-  
-};
 
-const NavBar:React.FC<NavBarProps> = () => {
+const NavBar:React.FC = () => {
   return (
     <NavbarContainer>
       <NavbarInnerContainer>
         <LeftContainer>
-          <TitleLinkContainer>
+          <TitleLinkContainer style={{ marginRight: '150px' }}>
             <TitleLink to='/'>KELASKITA</TitleLink>
           </TitleLinkContainer>
           <NavbarLinkContainer>
             <NavbarLink to='/'>HOME</NavbarLink>
+            <NavbarLink to='/'>TEACHER</NavbarLink>
             <NavbarLink to='/'>INFO</NavbarLink>
-            <NavbarLink to='/login'>REGISTER</NavbarLink>
+            <NavbarLink to='/'>TUTORIAL</NavbarLink>
           </NavbarLinkContainer>
         </LeftContainer>
-        <RightContainer></RightContainer>
+        <RightContainer>
+          <NavbarLinkContainer>
+            <NavbarLink to='/login'>
+              <ButtonLink>SIGN UP</ButtonLink>
+            </NavbarLink>
+          </NavbarLinkContainer>
+        </RightContainer>
       </NavbarInnerContainer>
       <NavbarExtendedContainer></NavbarExtendedContainer>
     </NavbarContainer>
-  )
+  );
 }
 export default NavBar;
