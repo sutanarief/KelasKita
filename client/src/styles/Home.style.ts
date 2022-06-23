@@ -3,8 +3,18 @@ import * as colors from './colors'
 
 
 export const HomeWrapper = styled.div`
-  background-color: ${colors.white};
-  padding: 30px;
+  /* background-color: ${colors.darkGreen}; */
+  padding: 40px;
   border-radius: 20px;
   height: 1200px;
+`
+
+export const Container = styled.div`
+  /* background-color: white; */
+  display: flex;
+  flex-direction: row;
+
+  div {
+    width: 50%;
+  }
 `

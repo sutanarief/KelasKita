@@ -8,5 +8,6 @@ export const LayoutWrapper = styled.div`
 `
 
 export const ContentWrapper = styled.div`
-  margin: 0.5px
+  margin: 0.5px;
+  /* background-color: blue; */
 `

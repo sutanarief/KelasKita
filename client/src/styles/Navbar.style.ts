@@ -52,6 +52,7 @@ export const ButtonLink = styled.button`
   font-size: large;
   border-radius: 30px;
   padding: 10px 30px 10px 30px;
+  cursor: pointer;
 `
 
 export const TitleLink = styled(NavbarLink)`
