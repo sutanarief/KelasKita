@@ -7,6 +7,8 @@ export const NavbarContainer = styled.nav`
   height: 80px;
   display: flex;
   flex-direction: column;
+  position: fixed;
+  background-color: rgba(237, 245, 225, 0.95);
 `
 
 export const LeftContainer = styled.div`

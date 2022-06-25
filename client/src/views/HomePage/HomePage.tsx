@@ -3,23 +3,28 @@ import NotesHome from '../../assets/notes-home.svg'
 import Sally from '../../assets/Saly-10.svg'
 import { Row, Col } from '../../styles/Global.style'
 import {
-  Container,
-  HomeWrapper
+  ContainerHero,
+  HomeWrapper,
+  LeftHero,
+  RightHero,
+  PrimaryText,
+  HighlightText,
+  OrdinaryText
 } from '../../styles/Home.style'
 
 const HomePage:React.FC = () => {
   return (
     <>
       <HomeWrapper>
-        <Container>
-              <div style={{display: 'flex', alignItems: 'center', flexDirection: 'row'}}>
-                  <h1>KELASKITA</h1>
-                  <p>A helpdesk program that will help every teacher to managing the class</p>
-              </div>
-              <div style={{display: 'flex', justifyContent: 'center', backgroundColor: '#e3e7dc', borderRadius: '50%'}}>
+        <ContainerHero>
+              <LeftHero>
+                  <PrimaryText><HighlightText>Easiest</HighlightText> way to get your class fully controled is here !</PrimaryText>
+                  <OrdinaryText>A solution to <b>simplify</b> school operational activities with only <b>one</b> application.</OrdinaryText>
+              </LeftHero>
+              <RightHero>
                 <img src={Sally} width='60%' />
-              </div>
-        </Container>
+              </RightHero>
+        </ContainerHero>
       </HomeWrapper>
     </>
   )
