@@ -18,7 +18,7 @@ const HomePage:React.FC = () => {
       <HomeWrapper>
         <ContainerHero>
               <LeftHero>
-                  <PrimaryText><HighlightText>Easiest</HighlightText> way to get your class fully controled is here !</PrimaryText>
+                  <PrimaryText><HighlightText>Easiest</HighlightText> way to get your class fully controlled is here !</PrimaryText>
                   <OrdinaryText>A solution to <b>simplify</b> school operational activities with only <b>one</b> application.</OrdinaryText>
               </LeftHero>
               <RightHero>
