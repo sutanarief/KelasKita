@@ -9,7 +9,10 @@ import {
   RightHero,
   PrimaryText,
   HighlightText,
-  OrdinaryText
+  OrdinaryText,
+  ContentContainer,
+  Content,
+  ContentText
 } from '../../styles/Home.style'
 
 const HomePage:React.FC = () => {
@@ -25,6 +28,11 @@ const HomePage:React.FC = () => {
                 <img src={Sally} width='60%' />
               </RightHero>
         </ContainerHero>
+        <ContentContainer>
+          <Content>
+            <ContentText>How It's Work ?</ContentText>
+          </Content>
+        </ContentContainer>
       </HomeWrapper>
     </>
   )

@@ -55,6 +55,12 @@ export const ButtonLink = styled.button`
   border-radius: 30px;
   padding: 10px 30px 10px 30px;
   cursor: pointer;
+
+  &:hover {
+    cursor: pointer;
+    background-color: ${colors.white};
+    color: ${colors.darkBlue}
+  }
 `
 
 export const TitleLink = styled(NavbarLink)`

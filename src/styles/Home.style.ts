@@ -4,7 +4,7 @@ import * as colors from './colors'
 
 export const HomeWrapper = styled.div`
   margin-top: 100px;
-  padding: 40px;
+  /* padding: 40px; */
   border-radius: 20px;
   height: 1200px;
 `
@@ -12,6 +12,7 @@ export const HomeWrapper = styled.div`
 export const ContainerHero = styled.div`
   display: flex;
   flex-direction: row;
+  margin-bottom: 10%;
 
   div {
     width: 50%;
@@ -22,7 +23,6 @@ export const LeftHero = styled.div`
   display:flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
 `
 
 export const RightHero = styled.div`
@@ -53,3 +53,13 @@ export const OrdinaryText = styled.p`
     color: ${colors.darkGreen};
   }
 `
+
+export const ContentContainer = styled.div`
+  background-color: ${colors.darkGreen}
+`
+
+export const Content = styled.div`
+
+`
+
+export const ContentText = styled.p``
