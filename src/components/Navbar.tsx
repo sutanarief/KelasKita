@@ -32,7 +32,7 @@ const NavBar:React.FC = () => {
         <RightContainer>
           <NavbarLinkContainer>
             <NavbarLink to='/login'>
-              <ButtonLink>SIGN UP</ButtonLink>
+              <ButtonLink>Log In</ButtonLink>
             </NavbarLink>
           </NavbarLinkContainer>
         </RightContainer>

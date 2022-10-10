@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from './components/Navbar';
 import routes from './routes';
 import { Route, Routes } from 'react-router-dom'
+import { GlobalStyle } from './styles/Global.style';
 
 const Layout = React.lazy(() => import("./layout/Layout"))
 const Home = React.lazy(() => import('./views/HomePage/HomePage'))
@@ -21,6 +22,7 @@ const App = () => {
     <footer>
       <h1>ini footer</h1>
     </footer> */}
+    {/* <GlobalStyle/> */}
       <React.Suspense fallback={<Loading/>}>
         <Routes>
           {routes.map((x, index) => (
