@@ -1,14 +1,12 @@
-import React from 'react'
-import NotesHome from '../../assets/notes-home.svg'
-import * as colors from '../../styles/colors'
-// import Sally from '../../assets/Saly-10.svg'
+import React, { useState } from 'react'
 import {
   Sally,
-  Blob,
-  Robot
+  Robot,
+  Hand
 } from '../../assets'
 
 import { contentList } from './ContentList'
+import { perkList } from './PerkList'
 import {
   ContainerHero,
   HomeWrapper,
@@ -20,7 +18,6 @@ import {
   ContentContainer,
   Content,
   ContentText,
-  ContentCard,
   CardWrapper,
   CardBody,
   CardHeader,
@@ -31,10 +28,21 @@ import {
   AboutUsText,
   TextWrapper,
   PrimaryAboutUsText,
-  SvgWrapper
+  SvgWrapper,
+  PerkPill,
+  PillWrapper,
+  InfoWrapper,
+  InfoBox,
+  InfoContent,
+  InfoText,
+  InfoRole,
+  InfoTextWrapper
 } from '../../styles/Home.style'
 
 const HomePage:React.FC = () => {
+  const [role, setRole] = useState("")
+  const [perks, setPerks] = useState([""])
+
 
   return (
     <>
@@ -69,7 +77,36 @@ const HomePage:React.FC = () => {
           <AboutUsWrapper>
             <TextWrapper>
               <PrimaryAboutUsText>Access to everything for everyone</PrimaryAboutUsText>
-              <AboutUsText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ducimus sit, impedit nihil accusamus ipsam blanditiis ratione reiciendis consectetur recusandae mollitia ea cupiditate voluptas adipisci consequatur fuga! Excepturi et repudiandae sit quia quod impedit dignissimos, autem provident inventore animi tempora molestiae consequatur a sapiente nisi eligendi eveniet? Nam odio veritatis quos! Sed molestias quam nulla asperiores, quas ipsam fuga. Nam ut magnam excepturi distinctio eos sint aliquid dolor nostrum deleniti. Quod libero similique, officia dolore dolor et ipsum quidem amet iste, deleniti consequatur doloremque odit, laudantium iure? Natus ea totam facilis pariatur nisi quibusdam iure doloremque, quis consequuntur rem architecto?  Enjoy all the features. All is easy when KELASKITA helping the school operational activity.</AboutUsText>
+              <AboutUsText>What can you do with KELASKITA :</AboutUsText>
+              <InfoWrapper>
+                <PillWrapper>
+                  {perkList.map((val, i) => (
+                    <PerkPill 
+                      pillColor={val.color}
+                      onMouseOver={() => {
+                        setRole(val.label)
+                        setPerks(val.perks)
+                      }}
+                      onMouseOut={() => {
+                        setRole("")
+                        setPerks([""])
+                      }}
+                      >{val.label}</PerkPill>
+                  ))}
+                </PillWrapper>
+                  {role && (
+                      <InfoBox>
+                        <InfoContent>
+                          <InfoTextWrapper>
+                            <InfoRole>{role}</InfoRole>
+                            {perks.map((x, i) => (
+                              <InfoText>- {x}</InfoText>
+                            ))}
+                          </InfoTextWrapper>
+                        </InfoContent>
+                      </InfoBox>
+                  )}
+              </InfoWrapper>
             </TextWrapper>
             <SvgWrapper>
               <Robot />

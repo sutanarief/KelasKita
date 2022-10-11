@@ -13,6 +13,9 @@ interface PropsCard {
   cardColor: string,
 }
 
+interface PropsPill {
+  pillColor: string,
+}
 
 export const HomeWrapper = styled.div`
   margin-top: 5%;
@@ -145,12 +148,80 @@ color: ${colors.darkBlue};
 `
 
 export const TextWrapper = styled.div`
-  max-width: 50%;
-  padding: 10%;
+  width: 100%;
+  padding: 5% 0;
 `
 
 export const SvgWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`
+
+export const PillWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  color: ${colors.white};
+  font-weight: 500;
+  width: 35%;
+`
+
+export const PerkPill = styled.div<PropsPill>`
+  background-color: ${props => props.pillColor};
+  margin-bottom: 10%;
+  padding: 5%;
+  border-radius: 1em;
+  border: none;
+  outline: none;
+  text-align: center;
+  width: 70%;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  
+  :hover {
+    transform: scale(1.1);
+  }
+  
+`
+
+export const InfoWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  height: 90%;
+`
+
+export const InfoBox = styled.div`
+  width: 60%;
+  height: 80%;
+  display: flex;
+  /* border-top: 3px solid ${colors.lessDarkGreen};
+  border-bottom: 3px solid ${colors.lessDarkGreen};
+  border-left: 3px solid ${colors.darkGreen};
+  border-right: 3px solid ${colors.darkGreen}; */
+  /* border-image: linear-gradient("#379683", "#5CA879") 27; */
+  background: linear-gradient(to right, #379683, #5CA879);
+  border-radius: 1em;
+  justify-content: center;
+  align-items: center;
+`
+
+export const InfoContent = styled.div`
+  background-color: #E3F3DD;
+  width: 98%;
+  height: 98%;
+  border-radius: .8em;
+  display: flex;
+  justify-content: center;
+`
+export const InfoTextWrapper = styled.div`
+  width: 90%;
+  height: 90%;
+`
+
+export const InfoRole = styled.h2`
+  color: ${colors.darkBlue};
+`
+
+export const InfoText = styled.h5`
+  color: ${colors.darkGreen};
 `
