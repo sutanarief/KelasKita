@@ -17,6 +17,40 @@ interface PropsPill {
   pillColor: string,
 }
 
+interface PropsSlider {
+  direction: number
+}
+
+interface PropsWrapper {
+  transform: number
+}
+
+interface PropsPicture {
+  source: string
+}
+
+interface PropsCardColor {
+  cardColor: string
+}
+
+interface PropsUserColor {
+  userColor: string
+}
+
+interface PropsRoleColor {
+  roleColor: string
+}
+
+interface PropsTypeColor {
+  typeColor: string
+  
+}
+
+interface PropsDataColor {
+  dataColor: string
+}
+
+
 export const HomeWrapper = styled.div`
   margin-top: 5%;
   /* padding: 40px; */
@@ -224,4 +258,85 @@ export const InfoRole = styled.h2`
 
 export const InfoText = styled.h5`
   color: ${colors.darkGreen};
+`
+export const RecentActivityContainer = styled.div`
+  margin: 15% 0 10% 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+`
+export const SliderContainer = styled.div`
+  display: flex;
+  align-self: flex-end;
+`
+
+export const Slider = styled.div<PropsSlider>`
+  transform: scaleX(${(props) => props.direction});
+  margin-right: 70%;
+  margin-left: -50%;
+  cursor: pointer;
+`
+
+export const ActivityCardWrapper = styled.div<PropsWrapper>`
+  display: flex;
+  margin-top: .5%;
+  transform: translateX(${(props) => props.transform * -100}%);
+  flex-grow: 1;
+  transition: transform 250ms ease-in-out;
+  overflow: visible;
+`
+
+export const ActivityCard = styled.div<PropsCardColor>`
+  position: static;
+  max-width: 35%;
+  flex: 0 0 25%;
+  background-color: ${(props) => props.cardColor};
+  padding: .35%;
+  margin: 0 3.9%;
+  flex-grow: 0;
+  border-radius: .5em;
+`
+
+export const ActivityCardHeader = styled.div`
+  margin: 4% 0 0 5%;
+  padding-top: -2%;
+  display: flex;
+`
+
+export const ActivityCardHeaderText = styled.div<PropsUserColor>`
+  color: ${(props) => props.userColor};
+  font-weight: 800;
+  margin: 0;
+  width: 100%;
+`
+
+export const ActivityCardHeaderRole = styled.div<PropsRoleColor>`
+  color: ${(props) => props.roleColor};
+  margin: 0;
+  font-size: small;
+  font-weight: 600;
+`
+
+export const ActivityProfilePicture = styled.div<PropsPicture>`
+  width: 3em;
+  height: 3em;
+  border-radius: .6em;
+  overflow: hidden;
+  background-image: url(${(props) => props.source});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+`
+
+
+export const ActivityTextWrapper = styled.div`
+  margin-left: 3%;
+`
+
+export const ActivityCardInfoText = styled.h5<PropsTypeColor>`
+  color: ${(props) => props.typeColor};
+`
+
+export const ActivityCardText = styled.p<PropsDataColor>`
+  color: ${(props) => props.dataColor}
 `

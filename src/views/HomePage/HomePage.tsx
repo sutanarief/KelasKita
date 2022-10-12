@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 import {
   Sally,
   Robot,
-  Hand
+  Hand,
+  Arrow
 } from '../../assets'
 
 import { contentList } from './ContentList'
 import { perkList } from './PerkList'
+import { activityList } from './ActivityList'
 import {
   ContainerHero,
   HomeWrapper,
@@ -36,12 +38,27 @@ import {
   InfoContent,
   InfoText,
   InfoRole,
-  InfoTextWrapper
+  InfoTextWrapper,
+  RecentActivityContainer,
+  ActivityCardWrapper,
+  ActivityCard,
+  SliderContainer,
+  Slider,
+  ActivityTextWrapper,
+  ActivityCardHeaderText,
+  ActivityCardInfoText,
+  ActivityCardText,
+  ActivityCardHeader,
+  ActivityProfilePicture,
+  ActivityCardHeaderRole
 } from '../../styles/Home.style'
 
 const HomePage:React.FC = () => {
   const [role, setRole] = useState("")
   const [perks, setPerks] = useState([""])
+  const [transform, setTransform] = useState(0)
+
+  const test = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 
 
   return (
@@ -113,6 +130,52 @@ const HomePage:React.FC = () => {
             </SvgWrapper>
           </AboutUsWrapper>
         </AboutUsContainer>
+        <RecentActivityContainer>
+          <h1>Recent Activity</h1>
+          <SliderContainer>
+            <Slider
+              direction={1}
+              onClick={() => {
+                if(transform) {
+                  setTransform(transform - 1)
+                }
+              }}
+              >
+              <Arrow/>
+            </Slider>
+            <Slider
+              direction={-1}
+              onClick={() => {
+                if(activityList.length > 3) {
+                  if(transform == Math.floor(activityList.length / 3)) {
+                    setTransform(0)
+                  } else {
+                    setTransform(transform + 1)
+                  }
+                }
+              }}
+              >
+              <Arrow/>
+            </Slider>
+          </SliderContainer>
+          <ActivityCardWrapper transform={transform}>
+            {activityList.map((val) => (
+              <ActivityCard cardColor={val.activityColor.cardColor}>
+                <ActivityCardHeader>
+                  <ActivityProfilePicture source={val.profilePicture} />
+                  <ActivityTextWrapper>
+                    <ActivityCardHeaderText userColor={val.activityColor.userNameColor}>{val.username}</ActivityCardHeaderText>
+                    <ActivityCardHeaderRole roleColor={val.activityColor.roleColor}>{val.class} {val.role}</ActivityCardHeaderRole>
+                  </ActivityTextWrapper>
+                </ActivityCardHeader>
+                <ActivityTextWrapper>
+                  <ActivityCardInfoText typeColor={val.activityColor.typeColor}>{val.activityType}</ActivityCardInfoText>
+                  <ActivityCardText dataColor={val.activityColor.dataColor}>{val.activityData}</ActivityCardText>
+                </ActivityTextWrapper>
+              </ActivityCard>
+            ))}
+          </ActivityCardWrapper>
+        </RecentActivityContainer>
       </HomeWrapper>
     </>
   )

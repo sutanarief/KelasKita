@@ -4,6 +4,7 @@ import { ReactComponent as RegisterIcon } from './register-icon.svg'
 import { ReactComponent as FindIcon } from './find-icon.svg'
 import { ReactComponent as Blob } from './blob.svg'
 import { ReactComponent as Hand } from './hand.svg'
+import { ReactComponent as Arrow } from './arrow.svg'
 
 export {
   Sally,
@@ -11,5 +12,6 @@ export {
   FindIcon,
   Robot,
   Blob,
-  Hand
+  Hand,
+  Arrow
 }
