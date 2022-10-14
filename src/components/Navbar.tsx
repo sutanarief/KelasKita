@@ -9,9 +9,10 @@ import {
   NavbarLink, 
   TitleLink,
   TitleLinkContainer,
-  ButtonLink
+  ButtonLink,
+  TitleText
 } from '../styles/Navbar.style';
-import Icon from './Icon'
+import * as colors from '../styles/colors'
 
 
 const NavBar:React.FC = () => {
@@ -20,7 +21,10 @@ const NavBar:React.FC = () => {
       <NavbarInnerContainer>
         <LeftContainer>
           <TitleLinkContainer style={{ marginRight: '150px' }}>
-            <TitleLink to='/'>KELASKITA</TitleLink>
+            <TitleLink to='/'>
+              <TitleText color={colors.darkBlue}>KELAS</TitleText>
+              <TitleText color={colors.darkGreen}>KITA</TitleText>
+            </TitleLink>
           </TitleLinkContainer>
           <NavbarLinkContainer>
             <NavbarLink to='/'>HOME</NavbarLink>

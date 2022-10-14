@@ -50,6 +50,18 @@ interface PropsDataColor {
   dataColor: string
 }
 
+interface PropsTimeColor {
+  timeColor: string
+}
+
+interface PropsSeeMore {
+  seeMoreColor: string
+}
+
+interface PropsColorTitle {
+  titleColor: string
+}
+
 
 export const HomeWrapper = styled.div`
   margin-top: 5%;
@@ -237,6 +249,10 @@ export const InfoBox = styled.div`
   border-radius: 1em;
   justify-content: center;
   align-items: center;
+  /* visibility: hidden; */
+  transition: all .2s ease-in-out;
+
+
 `
 
 export const InfoContent = styled.div`
@@ -301,6 +317,7 @@ export const ActivityCardHeader = styled.div`
   margin: 4% 0 0 5%;
   padding-top: -2%;
   display: flex;
+  width: 100%;
 `
 
 export const ActivityCardHeaderText = styled.div<PropsUserColor>`
@@ -331,12 +348,60 @@ export const ActivityProfilePicture = styled.div<PropsPicture>`
 
 export const ActivityTextWrapper = styled.div`
   margin-left: 3%;
+  margin-right: 3%;
 `
 
 export const ActivityCardInfoText = styled.h5<PropsTypeColor>`
   color: ${(props) => props.typeColor};
+  margin-bottom: 0;
+  margin-top: 5%;
 `
 
 export const ActivityCardText = styled.p<PropsDataColor>`
-  color: ${(props) => props.dataColor}
+  color: ${(props) => props.dataColor};
+  margin-top: 3%;
+  font-size: .89em;
+  font-weight: 500;
 `
+
+export const RecentText = styled.h1`
+  color: ${colors.darkBlue};
+`
+
+export const ActivityFooter = styled.div`
+  display: flex;
+  justify-content: end;
+  padding: 0 5% 0 0;
+`
+
+export const ActivityFooterText = styled.p<PropsTimeColor>`
+  color: ${(props) => props.timeColor};
+  font-weight: 500;
+  font-size: small;
+  margin-top: 0;
+`
+
+export const ActivityCardBody = styled.div`
+  height: 8em;
+  overflow: hidden;
+  text-overflow: ellipsis;;
+`
+
+export const SeeMoreText = styled.span<PropsSeeMore>`
+  color: ${(props) => props.seeMoreColor};
+  font-weight: 500;
+  cursor: pointer;
+`
+
+export const Footer = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
+export const FooterTitleText = styled.span<PropsColorTitle>`
+  color: ${(props) => props.titleColor};
+  font-size: x-large;
+  font-weight: 800;
+`
+
+export const FooterCreditText = styled.p``

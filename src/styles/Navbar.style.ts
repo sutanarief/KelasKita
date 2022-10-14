@@ -2,6 +2,10 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import * as colors from './colors'
 
+interface PropsTextColor {
+  color: string
+}
+
 export const NavbarContainer = styled.nav`
   width: 100%;
   height: 80px;
@@ -70,4 +74,8 @@ export const TitleLink = styled(NavbarLink)`
 
 export const NavbarExtendedContainer = styled.div`
   display: flex;
+`
+
+export const TitleText = styled.span<PropsTextColor>`
+  color: ${(props) => props.color}
 `
