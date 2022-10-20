@@ -153,6 +153,7 @@ export const CardBody = styled.div<PropsCard>`
   border-radius: 10%;
   cursor: pointer;
   transition: all .2s ease-in-out;
+  box-shadow: .8em .4em .4em rgba(209, 209, 209, .4);
   
   :hover {
     transform: scale(1.1);
@@ -276,7 +277,7 @@ export const InfoText = styled.h5`
   color: ${colors.darkGreen};
 `
 export const RecentActivityContainer = styled.div`
-  margin: 15% 0 10% 0;
+  margin: 15% 0 20% 0;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -295,7 +296,7 @@ export const Slider = styled.div<PropsSlider>`
 
 export const ActivityCardWrapper = styled.div<PropsWrapper>`
   display: flex;
-  margin-top: .5%;
+  margin: .5% 0 10% 0;
   transform: translateX(${(props) => props.transform * -100}%);
   flex-grow: 1;
   transition: transform 250ms ease-in-out;
@@ -310,6 +311,7 @@ export const ActivityCard = styled.div<PropsCardColor>`
   padding: .35%;
   margin: 0 3.9%;
   flex-grow: 0;
+  box-shadow: .8em .6em .6em rgba(209, 209, 209, .4);
   border-radius: .5em;
 `
 
@@ -357,6 +359,10 @@ export const ActivityCardInfoText = styled.h5<PropsTypeColor>`
   margin-top: 5%;
 `
 
+export const StarWrapper = styled.div`
+  display: flex;
+`
+
 export const ActivityCardText = styled.p<PropsDataColor>`
   color: ${(props) => props.dataColor};
   margin-top: 3%;
@@ -392,16 +398,3 @@ export const SeeMoreText = styled.span<PropsSeeMore>`
   font-weight: 500;
   cursor: pointer;
 `
-
-export const Footer = styled.div`
-  display: flex;
-  justify-content: center;
-`
-
-export const FooterTitleText = styled.span<PropsColorTitle>`
-  color: ${(props) => props.titleColor};
-  font-size: x-large;
-  font-weight: 800;
-`
-
-export const FooterCreditText = styled.p``

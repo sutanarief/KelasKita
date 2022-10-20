@@ -8,11 +8,14 @@ interface PropsTextColor {
 
 export const NavbarContainer = styled.nav`
   width: 100%;
-  height: 80px;
   display: flex;
+  padding: 1%;
   flex-direction: column;
   position: fixed;
-  background-color: rgba(237, 245, 225, 0.95);
+  /* background-color: rgba(5, 56, 107, 0.95); */
+  background-color: rgba(237, 245, 225, .95);
+  /* background-color: red; */
+  z-index: 1;
 `
 
 export const LeftContainer = styled.div`
@@ -25,12 +28,11 @@ export const RightContainer = styled.div`
   flex: 30%;
   display: flex;
   justify-content: flex-end;
-  padding-right: 50px;
+  padding-right: 1%;
 `
 
 export const NavbarInnerContainer = styled.div`
   width: 100%;
-  height: 80px;
   display: flex;
 `
 
@@ -44,7 +46,7 @@ export const TitleLinkContainer = styled(NavbarLinkContainer)`
 
 export const NavbarLink = styled(Link)`
   color: #05386B;
-  font-size: large;
+  font-size: small;
   font-weight: 500;
   align-self: center;
   text-decoration: none;
@@ -55,10 +57,21 @@ export const ButtonLink = styled.button`
   background-color: ${colors.darkBlue};
   color: ${colors.white};
   font-weight: 800;
-  font-size: large;
-  border-radius: 30px;
+  font-size: small;
+  border-radius: 1em;
   padding: 10px 30px 10px 30px;
   cursor: pointer;
+
+
+  /* background-color: ${colors.darkBlue};
+  color: ${colors.white};
+  margin-bottom: 10%;
+  padding: 5%;
+  font-size: small;
+  border-radius: 1em;
+  border: none;
+  outline: none;
+  cursor: pointer; */
 
   &:hover {
     cursor: pointer;
