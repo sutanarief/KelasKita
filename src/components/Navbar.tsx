@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   LeftContainer, 
   NavbarContainer, 
@@ -13,9 +13,12 @@ import {
   TitleText
 } from '../styles/Navbar.style';
 import * as colors from '../styles/colors'
+import Modal from './Modal';
 
 
 const NavBar:React.FC = () => {
+
+  const [isOpen, setIsOpen] = useState(false)
   return (
     <NavbarContainer>
       <NavbarInnerContainer>
@@ -35,13 +38,17 @@ const NavBar:React.FC = () => {
         </LeftContainer>
         <RightContainer>
           <NavbarLinkContainer>
-            <NavbarLink to='/login'>
-              <ButtonLink>Log In</ButtonLink>
-            </NavbarLink>
+              <ButtonLink onClick={() => setIsOpen(!isOpen)}>Log In</ButtonLink>
           </NavbarLinkContainer>
         </RightContainer>
       </NavbarInnerContainer>
       <NavbarExtendedContainer></NavbarExtendedContainer>
+      {isOpen && (
+        <Modal
+          width={'80%'}
+          height={'80%'}
+        />
+      )}
     </NavbarContainer>
   );
 }

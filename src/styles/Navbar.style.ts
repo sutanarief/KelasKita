@@ -27,7 +27,7 @@ export const LeftContainer = styled.div`
 export const RightContainer = styled.div`
   flex: 30%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   padding-right: 1%;
 `
 
@@ -61,6 +61,8 @@ export const ButtonLink = styled.button`
   border-radius: 1em;
   padding: 10px 30px 10px 30px;
   cursor: pointer;
+  border: none;
+  outline: none;
 
 
   /* background-color: ${colors.darkBlue};
@@ -76,7 +78,8 @@ export const ButtonLink = styled.button`
   &:hover {
     cursor: pointer;
     background-color: ${colors.white};
-    color: ${colors.darkBlue}
+    color: ${colors.darkBlue};
+    border: .18em solid ${colors.darkBlue}
   }
 `
 
