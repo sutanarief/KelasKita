@@ -228,7 +228,6 @@ export const PerkPill = styled.div<PropsPill>`
   :hover {
     transform: scale(1.1);
   }
-  
 `
 
 export const InfoWrapper = styled.div`
@@ -277,7 +276,7 @@ export const InfoText = styled.h5`
   color: ${colors.darkGreen};
 `
 export const RecentActivityContainer = styled.div`
-  margin: 15% 0 20% 0;
+  margin: 15% 0 5% 0;
   display: flex;
   flex-direction: column;
   overflow: hidden;

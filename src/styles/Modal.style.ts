@@ -42,6 +42,8 @@ export const ModalContentWrapper = styled.div`
 export const ModalLeftWrapper = styled(ModalContentWrapper)`
   background-color: ${colors.darkGreen};
   border-radius: 1em 0 0 1em;
+  display: flex;
+  justify-content: center;
 `
 
 export const ModalRightWrapper = styled(ModalContentWrapper)`
@@ -52,8 +54,42 @@ export const ModalRightWrapper = styled(ModalContentWrapper)`
 export const ModalContent = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-self: center;
+  align-items: center;
   background-color: ${colors.moreGrey};
-  padding: 20%;
+  /* padding: 20%; */
+  height: 60%;
   border-radius: 1em;
+  width: 70%;
+`
+
+export const ModalButton = styled.button`
+  background-color: ${colors.white};
+  color: ${colors.darkBlue};
+  margin-top: 3%;
+  padding: 2%;
+  border-radius: 1em;
+  border: 1px solid ${colors.darkBlue};
+  outline: none;
+  text-align: center;
+  width: 70%;
+  cursor: pointer;
+  transition: all .1s ease-in-out;
+  
+  :hover {
+    transform: scale(1.03);
+    background-color: ${colors.darkBlue};
+    color: ${colors.white};
+  }
+`
+
+export const ModalForm = styled.form`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
 `
