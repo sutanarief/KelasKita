@@ -10,9 +10,9 @@ import {
 } from '../../assets'
 import { dateFormat } from '../../global/helper'
 
-import { contentList } from './ContentList'
-import { perkList } from './PerkList'
-import { activityList } from './ActivityList'
+import { contentList } from '../../data/ContentList'
+import { perkList } from '../../data/PerkList'
+import { activityList } from '../../data/ActivityList'
 import {
   ContainerHero,
   HomeWrapper,
@@ -122,7 +122,6 @@ const HomePage:React.FC = () => {
               <OrdinaryText>A solution to <b>simplify</b> school operational activities with only <b>one</b> application.</OrdinaryText>
           </LeftHero>
           <RightHero>
-            {/* <img src={Sally} width='60%' /> */}
             <Sally />
           </RightHero>
         </ContainerHero>

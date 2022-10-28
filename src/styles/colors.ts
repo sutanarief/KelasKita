@@ -1,4 +1,5 @@
 export const darkBlue = '#05386B'
+export const brightWhite = '#F3F5EF'
 export const darkGreen = '#379683'
 export const green = '#5CDB95'
 export const softGreen = '#8EE4AF'

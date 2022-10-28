@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { 
   LeftContainer, 
   NavbarContainer, 
@@ -19,6 +19,10 @@ import Modal from './Modal';
 const NavBar:React.FC = () => {
 
   const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+  }, [isOpen])
+
   return (
     <NavbarContainer>
       <NavbarInnerContainer>
@@ -31,7 +35,7 @@ const NavBar:React.FC = () => {
           </TitleLinkContainer>
           <NavbarLinkContainer>
             <NavbarLink to='/'>HOME</NavbarLink>
-            <NavbarLink to='/'>TEACHER</NavbarLink>
+            <NavbarLink to='/'>TEAMS</NavbarLink>
             <NavbarLink to='/'>INFO</NavbarLink>
             <NavbarLink to='/'>TUTORIAL</NavbarLink>
           </NavbarLinkContainer>
@@ -43,12 +47,12 @@ const NavBar:React.FC = () => {
         </RightContainer>
       </NavbarInnerContainer>
       <NavbarExtendedContainer></NavbarExtendedContainer>
-      {isOpen && (
         <Modal
           width={'80%'}
           height={'80%'}
+          toggle={setIsOpen}
+          isOpen={isOpen}
         />
-      )}
     </NavbarContainer>
   );
 }

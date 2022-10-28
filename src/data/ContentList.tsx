@@ -1,7 +1,7 @@
 import {
   RegisterIcon,
   FindIcon
-} from '../../assets'
+} from '../assets'
 
 export const contentList = [
   {
