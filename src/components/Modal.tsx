@@ -65,7 +65,6 @@ const Modal:React.FC<ModalProps> = ({width, height, isOpen, toggle}) => {
                 <CloseButton onClick={() => toggle(false)}>X</CloseButton>
               </CloseButtonContainer>
               <ModalContentWrapper>
-              <h1>a</h1>
                 <ModalContent>
                   <ModalForm onSubmit={handleSubmit}>
                     {/* <InputLabel></InputLabel> */}
